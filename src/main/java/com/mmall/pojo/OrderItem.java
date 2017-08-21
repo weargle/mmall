@@ -26,9 +26,9 @@ public class OrderItem {
 
     private Date updateTime;
 
+
     public OrderItem(Integer id, Integer userId, Long orderNo, Integer productId, String productName, String productImage, BigDecimal currentUnitPrice, Integer quantity, BigDecimal totalPrice, Date createTime, Date updateTime) {
         this.id = id;
-        this.userId = userId;
         this.orderNo = orderNo;
         this.productId = productId;
         this.productName = productName;
@@ -38,6 +38,7 @@ public class OrderItem {
         this.totalPrice = totalPrice;
         this.createTime = createTime;
         this.updateTime = updateTime;
+        this.userId = userId;
     }
 
     public OrderItem() {
@@ -50,14 +51,6 @@ public class OrderItem {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
     }
 
     public Long getOrderNo() {
@@ -130,5 +123,13 @@ public class OrderItem {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }
