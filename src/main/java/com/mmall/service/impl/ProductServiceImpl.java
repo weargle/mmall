@@ -84,7 +84,7 @@ public class ProductServiceImpl implements IProductService{
         return ServerResponse.createBySuccess(productDetailVo);
     }
 
-    public ProductDetailVo assembleProductDetailVo(Product product) {
+    private ProductDetailVo assembleProductDetailVo(Product product) {
         ProductDetailVo productDetailVo = new ProductDetailVo();
         productDetailVo.setId(product.getId());
         productDetailVo.setSubtitle(product.getSubtitle());
@@ -125,7 +125,7 @@ public class ProductServiceImpl implements IProductService{
         return ServerResponse.createBySuccess(pageResult);
     }
 
-    public ProductListVo assembleProductListVo(Product product) {
+    private ProductListVo assembleProductListVo(Product product) {
         ProductListVo productListVo = new ProductListVo();
         productListVo.setId(product.getId());
         productListVo.setCategoryId(product.getCategoryId());
